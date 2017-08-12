@@ -16,19 +16,19 @@ const HeaderWrap = styled.div`
 `;
 
 const Logo = styled.img`
-  flex: 1;
-`
-
+  flex: 1
+`;
 const Title = styled.h1`
   flex: 6;
   text-align: center;
+  font-size: 3em;
 `;
 
 const Phone = styled.h3`
 flex: 1;
-  > a {
+  a {
     color: black;
-    text-decoration: none;
+    text-decoration: none
   };
   a:hover {
     color: lightblue;

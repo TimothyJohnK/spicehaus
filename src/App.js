@@ -5,13 +5,17 @@ import Footer from './components/footer.jsx';
 import styled from 'styled-components';
 
 
+const MainBody = styled.body`
+  background: url(./images/bg.jpg) no-repeat center center fixed;
+`
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <section>
         <Header />
         <Footer />
-      </div>
+      </section>
     )
   };
 }
