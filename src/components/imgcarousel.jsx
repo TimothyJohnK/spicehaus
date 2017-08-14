@@ -50,24 +50,25 @@ export default class ImgCarousel extends Component {
 
     let i = 0;
 
-    // function CarouselRight() {
-    //   state++;
-    //     return (
-    //       <img src= {imageRepo[state].imagePath.value} alt='spice_picture'> {imageRepo[state].description.value} </img>
-    //     );
-    //   };
-
-    // const RenderImage = function renderImage() {
-    //   return <div><
+    // const RenderImage = function () {
+    //   return (
+    //   <ImageWrapper>
+    //     <img src = { imageRepo[i].imagePath.toString() } alt='spice_picture' /> 
+    //   <Description>
+    //     { imageRepo[i].description.toString() }
+    //     </Description>
+    //   </ImageWrapper> )
     // }
 
-    const CarouselLeft = function carouselLeft() {
+    const CarouselLeft = function () {
         i--;
+        i = i < 0 ? 0 : i;
         console.log(i);
       };
     
-    const CarouselRight = function carouselRight() {
+    const CarouselRight = function () {
         i++;
+        i = i >= imageRepo.length - 1 ? imageRepo.length - 1 : i;
         console.log(i);
         };
 
@@ -75,7 +76,7 @@ export default class ImgCarousel extends Component {
       <CarouselWrapper>
         <Button onClick= { CarouselLeft }> &#x261C; </Button>
         <ImageWrapper>
-          <img src = { imageRepo[i].imagePath.toString() }alt='spice_picture' /> 
+          <img src = { imageRepo[i].imagePath.toString() } alt='spice_picture' /> 
           <Description> { imageRepo[i].description.toString() } </Description>
         </ImageWrapper>
         <Button onClick= { CarouselRight }> &#x261E; </Button>
