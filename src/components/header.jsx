@@ -18,6 +18,7 @@ const HeaderWrap = styled.div`
 const Logo = styled.img`
   flex: 1
 `;
+
 const Title = styled.h1`
   flex: 6;
   text-align: center;
@@ -35,7 +36,7 @@ flex: 1;
   }
 `;
 
-export default class Header extends React.Component {
+export default class Header extends Component {
   render() {
     return (
       <HeaderWrap>
